@@ -1,0 +1,145 @@
+
+<!-- MasterMind index.html -->
+<!-- created by Kinga Papay 13/01/23 -->
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterMind Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+
+    <div class="text-section center">
+      <h2 id="top">M a s t e r M i n d <span class="info-link"><a href="#info">info</a></span></h2>
+      <hr>
+      <div id="start_msg">Break the code! <button id="start_btn">Start</button></div>
+      <div id="win_msg">You win! <button class="restart-btn">Restart</button></div>
+      <div id="lose_msg">You lose! <button class="restart-btn">Restart</button></div>
+    </div>
+
+    <div class="board center">
+      <table class="code-row center">
+        <tr>
+          <td><button class="code-btn"></button></td>
+          <td><button class="code-btn"></button></td>
+          <td><button class="code-btn"></button></td>
+          <td><button class="code-btn"></button></td>
+          <td id ="check_cross"></td>
+        </tr>
+      </table>
+
+      <hr class="board-divider">
+
+      <table class="spot-rows center">
+        <tr id="1">
+          <td><button class="dot 1dot"></button><button class="board-btn 1btn" value="1"></button></td>
+          <td><button class="dot 1dot"></button><button class="board-btn 1btn" value="2"></button></td>
+          <td><button class="dot 1dot"></button><button class="board-btn 1btn" value="3"></button></td>
+          <td><button class="dot 1dot"></button><button class="board-btn 1btn" value="4"></button></td>
+          <td><span id="1arrow" class="arrow"> &#10094; </span> <button id="1go" class="calc-btn">Go!</button><span id="1hint" class="result-field"></span></td>
+        </tr>
+        <tr id="2">
+          <td><button class="dot 2dot"></button><button class="board-btn 2btn" value="1"></button></td>
+          <td><button class="dot 2dot"></button><button class="board-btn 2btn" value="2"></button></td>
+          <td><button class="dot 2dot"></button><button class="board-btn 2btn" value="3"></button></td>
+          <td><button class="dot 2dot"></button><button class="board-btn 2btn" value="4"></button></td>
+          <td><span id="2arrow" class="arrow"> &#10094; </span> <button id="2go" class="calc-btn">Go!</button><span id="2hint" class="result-field"></span></td>
+        </tr>
+        <tr id="3">
+          <td><button class="dot 3dot"></button><button class="board-btn 3btn" value="1"></button></td>
+          <td><button class="dot 3dot"></button><button class="board-btn 3btn" value="2"></button></td>
+          <td><button class="dot 3dot"></button><button class="board-btn 3btn" value="3"></button></td>
+          <td><button class="dot 3dot"></button><button class="board-btn 3btn" value="4"></button></td>
+          <td><span id="3arrow" class="arrow"> &#10094; </span> <button id="3go" class="calc-btn">Go!</button><span id="3hint" class="result-field"></span></td>
+        </tr>
+        <tr id="4">
+          <td><button class="dot 4dot"></button><button class="board-btn 4btn" value="1"></button></td>
+          <td><button class="dot 4dot"></button><button class="board-btn 4btn" value="2"></button></td>
+          <td><button class="dot 4dot"></button><button class="board-btn 4btn" value="3"></button></td>
+          <td><button class="dot 4dot"></button><button class="board-btn 4btn" value="4"></button></td>
+          <td><span id="4arrow" class="arrow"> &#10094; </span> <button id="4go" class="calc-btn">Go!</button><span id="4hint" class="result-field"></span></td>
+        </tr>
+        <tr id="5">
+          <td><button class="dot 5dot"></button><button class="board-btn 5btn" value="1"></button></td>
+          <td><button class="dot 5dot"></button><button class="board-btn 5btn" value="2"></button></td>
+          <td><button class="dot 5dot"></button><button class="board-btn 5btn" value="3"></button></td>
+          <td><button class="dot 5dot"></button><button class="board-btn 5btn" value="4"></button></td>
+          <td><span id="5arrow" class="arrow"> &#10094; </span> <button id="5go" class="calc-btn">Go!</button><span id="5hint" class="result-field"></span></td>
+        </tr>
+        <tr id="6">
+          <td><button class="dot 6dot"></button><button class="board-btn 6btn" value="1"></button></td>
+          <td><button class="dot 6dot"></button><button class="board-btn 6btn" value="2"></button></td>
+          <td><button class="dot 6dot"></button><button class="board-btn 6btn" value="3"></button></td>
+          <td><button class="dot 6dot"></button><button class="board-btn 6btn" value="4"></button></td>
+          <td><span id="6arrow" class="arrow"> &#10094; </span> <button id="6go" class="calc-btn">Go!</button><span id="6hint" class="result-field"></span></td>
+        </tr>
+        <tr id="7">
+          <td><button class="dot 7dot"></button><button class="board-btn 7btn" value="1"></button></td>
+          <td><button class="dot 7dot"></button><button class="board-btn 7btn" value="2"></button></td>
+          <td><button class="dot 7dot"></button><button class="board-btn 7btn" value="3"></button></td>
+          <td><button class="dot 7dot"></button><button class="board-btn 7btn" value="4"></button></td>
+          <td><span id="7arrow" class="arrow"> &#10094; </span> <button id="7go" class="calc-btn">Go!</button><span id="7hint" class="result-field"></span></td>
+        </tr>
+        <tr id="8">
+          <td><button class="dot 8dot"></button><button class="board-btn 8btn" value="1"></button></td>
+          <td><button class="dot 8dot"></button><button class="board-btn 8btn" value="2"></button></td>
+          <td><button class="dot 8dot"></button><button class="board-btn 8btn" value="3"></button></td>
+          <td><button class="dot 8dot"></button><button class="board-btn 8btn" value="4"></button></td>
+          <td><span id="8arrow" class="arrow"> &#10094; </span> <button id="8go" class="calc-btn">Go!</button><span id="8hint" class="result-field"></span></td>
+        </tr>
+        <tr id="9">
+          <td><button class="dot 9dot"></button><button class="board-btn 9btn" value="1"></button></td>
+          <td><button class="dot 9dot"></button><button class="board-btn 9btn" value="2"></button></td>
+          <td><button class="dot 9dot"></button><button class="board-btn 9btn" value="3"></button></td>
+          <td><button class="dot 9dot"></button><button class="board-btn 9btn" value="4"></button></td>
+          <td><span id="9arrow" class="arrow"> &#10094; </span> <button id="9go" class="calc-btn">Go!</button><span id="9hint" class="result-field"></span></td>
+        </tr>
+        <tr id="10">
+          <td><button class="dot 10dot"></button><button class="board-btn 10btn" value="1"></button></td>
+          <td><button class="dot 10dot"></button><button class="board-btn 10btn" value="2"></button></td>
+          <td><button class="dot 10dot"></button><button class="board-btn 10btn" value="3"></button></td>
+          <td><button class="dot 10dot"></button><button class="board-btn 10btn" value="4"></button></td>
+          <td><span id="10arrow" class="arrow"> &#10094; </span> <button id="10go" class="calc-btn">Go!</button><span id="10hint" class="result-field"></span></td>
+        </tr>
+      </table>
+
+      <hr class="board-divider">
+
+      <table class="button-set center">
+        <tr>
+          <td><button id="set_btn1" class="pick-btn" style="background-color: orangered;" value="1"></button></td>
+          <td><button id="set_btn2" class="pick-btn" style="background-color: cornflowerblue;" value="2"></button></td>
+          <td><button id="set_btn3" class="pick-btn" style="background-color: yellow;" value="3"></button></td>
+          <td><button id="set_btn4" class="pick-btn" style="background-color: white;" value="4"></button></td>
+          <td id="easter_egg"></td>
+        </tr>
+         <tr>
+          <td><button id="set_btn5" class="pick-btn" style="background-color: greenyellow;" value="5"></button></td>
+          <td><button id="set_btn6" class="pick-btn" style="background-color: saddlebrown;" value="6"></button></td>
+          <td><button id="set_btn7" class="pick-btn" style="background-color: purple;" value="7"></button></td>
+          <td><button id="set_btn8" class="pick-btn" style="background-color: black;" value="8"></button></td>
+          <td id="chosen_color"></td>
+        </tr>
+      </table>
+
+    </div>
+
+    <br>
+
+    <div id="info" class="text-section center">
+      <hr>
+      <h3>info</h3>
+      <p>Break the code by guessing the colors and their right spot within ten tries. You get a hint after each try: </p>
+      <p> &#9898; white dot = you guessed the color AND the spot right. </p>
+      <p> &#9899; black dot = you guessed the color right (but not its spot). </p>
+      <p><span class="info-link"><a href="#top">Back to Game</a></span></p>
+    </div>
+
+  </body>
+</html>

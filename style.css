@@ -1,0 +1,81 @@
+/*
+* MasterMind style.css
+* created by Kinga Papay 13/01/23
+*/
+
+#top, #info {
+  font-family: 'Times New Roman', serif;
+}
+#start_msg, #win_msg, #lose_msg {
+  font-family: "Brush Script MT", cursive;
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+html {
+  color: darkslategrey;
+}
+td {
+  border:1px solid lightgrey;
+  width:40px;
+  height:40px;
+}
+button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 3px solid grey;
+  color: darkslategrey;
+  background-color: lightgrey;
+}
+.center {
+  margin: auto;
+}
+.text-section {
+  width: 234px;
+}
+.board {
+  background-color: burlywood;
+  padding: 5px;
+  border: 2px solid darkslategrey;
+  border-radius: 5px;
+  width: 230px;
+}
+hr.board-divider {
+  border: 1px solid darkslategrey;
+}
+.code-btn, .dot, #check_cross {
+  border: none;
+}
+.result-field {
+  font-size: 10px;
+}
+.info-link {
+  font-size: small;
+}
+#chosen_color {
+  background-color: lightgrey;
+}
+#start_msg button, #win_msg button, #lose_msg button {
+  height: 20px;
+  width: 80px;
+}
+#start_msg button, #win_msg button, #lose_msg button, .calc-btn  {
+  border: 1px solid darkslategray;
+  background-color: slategrey;
+  color: white;
+  cursor: pointer;
+}
+#start_msg button:hover, #win_msg button:hover, #lose_msg button:hover, #start_msg button:active, #win_msg button:active, #lose_msg button:active, button.calc-btn:hover, button.calc-btn:active {
+  background-color: darkslategray;
+}
+.button-set td:hover {
+  background-color: lightgrey;
+}
+
+#win_msg, #lose_msg, .board-btn, .calc-btn, .arrow {
+  display: none;
+}
+#easter_egg {
+  visibility: hidden;
+}
